@@ -13,7 +13,7 @@ import { useUserContext } from '../context/user_context'
 import { formatPrice } from '../utils/helpers'
 import { useHistory } from 'react-router-dom'
 
-const promise = loadStripe("pk_test_51JS1ltSJK3NlUK08N3CiXLlIGyA9fiKzp5ixUrG047nGf7kXEIPmgwF7FhqtkoFaLqGn66kiIoz7QXPCf30eECwJ00pdMMrfL7")
+const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 
 const CheckoutForm = () => {
   const { Bag, total_amount, shipping_fee, clearBag } = useBagContext()
